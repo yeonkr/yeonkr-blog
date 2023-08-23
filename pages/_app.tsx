@@ -16,6 +16,7 @@ import PageLoading from '~/components/PageLoading';
 import { bootstrap } from '~/lib/bootstrap-client';
 import { posthogConfig, posthogId } from '~/lib/config';
 import '~/styles/custom/index.scss';
+import { Footer } from '~/components/Footer';
 
 const Bootstrap = () => {
   const [preferences, setPreferences] = useRecoilState(preferencesStore);
@@ -88,6 +89,7 @@ export default function App({ Component, pageProps, router }: AppProps) {
           <Component {...pageProps} />
         </motion.div>
       </SWRConfig>
+      <Footer />
     </RecoilRoot>
   );
 }
