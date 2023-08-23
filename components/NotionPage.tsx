@@ -238,7 +238,7 @@ export const NotionPage: React.FC<types.PageProps> = ({
       {isLiteMode && <BodyClassName className="notion-lite" />}
 
       <NotionRenderer
-        className={cs(isIndexPage ? 'indexPage' : 'childPage', { hasCollectionView })}
+        // className={cs(isIndexPage ? 'indexPage' : 'childPage', { hasCollectionView })}
         bodyClassName={cs(styles.notion, isIndexPage && 'index-page')}
         darkMode={isDarkMode}
         components={components}
