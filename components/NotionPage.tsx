@@ -30,6 +30,7 @@ import { Page404 } from './Page404';
 import { PageAside } from './PageAside';
 import { PageHead } from './PageHead';
 import styles from './styles.module.css';
+import Giscus from '@giscus/react';
 
 // -----------------------------------------------------------------------------
 // dynamic imports for optional components
@@ -221,9 +222,33 @@ export const NotionPage: React.FC<types.PageProps> = ({
 
   const socialDescription = getPageProperty<string>('설명', block, recordMap) || config.description;
 
+  let comments: React.ReactNode = null;
+
   const isIndexPage = pageId === site.rootNotionPageId;
 
   const hasCollectionView = Object.keys(recordMap.collection_query).length;
+
+  if (isBlogPost) {
+    if (config.GiscusGitHubRepo) {
+      comments = (
+        <Giscus
+          id="comments"
+          repo="yeonkr/notion-blog-kit"
+          repoId="R_kgDOKKUhQg"
+          category="Comments"
+          categoryId="DIC_kwDOKKUhQs4CY0ez"
+          mapping="pathname"
+          strict="0"
+          reactionsEnabled="1"
+          emitMetadata="0"
+          inputPosition="bottom"
+          lang="ko"
+          loading="lazy"
+          theme={isDarkMode ? 'dark_tritanopia' : 'light'}
+        />
+      );
+    }
+  }
 
   return (
     <>
@@ -257,13 +282,14 @@ export const NotionPage: React.FC<types.PageProps> = ({
         mapImageUrl={mapImageUrl}
         searchNotion={config.isSearchEnabled ? searchNotion : null}
         pageAside={pageAside}
-        pageFooter={
-          config.enableComment ? (
-            !isBlogPost ? null : (
-              <Comments pageId={pageId} recordMap={recordMap} />
-            )
-          ) : null
-        }
+        pageFooter={comments}
+        // pageFooter={
+        //   config.enableComment ? (
+        //     !isBlogPost ? null : (
+        //       <Comments pageId={pageId} recordMap={recordMap} />
+        //     )
+        //   ) : null
+        // }
         footer={null}
       />
     </>
