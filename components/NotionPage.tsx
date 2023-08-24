@@ -244,7 +244,7 @@ export const NotionPage: React.FC<types.PageProps> = ({
           inputPosition="bottom"
           lang="ko"
           loading="lazy"
-          theme={isDarkMode ? 'dark_tritanopia' : 'light'}
+          theme={isDarkMode ? 'noborder_dark' : 'noborder_light'}
         />
       );
     }
