@@ -33,6 +33,8 @@ export interface SiteConfig {
   navigationStyle?: types.NavigationStyle;
   navigationLinks?: Array<NavigationLink>;
 
+  GiscusGitHubRepo?: string;
+
   // custom configs (2skydev)
   dateformat: string;
   hiddenPostProperties: string[];

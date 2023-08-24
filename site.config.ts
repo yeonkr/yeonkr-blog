@@ -74,6 +74,8 @@ export default siteConfig({
 
   // -------- custom configs (yeonkr) -------------
 
+  GiscusGitHubRepo: `yeonkr/yeonkr-blog`,
+
   // date-fns format string
   dateformat: 'yyyy년 MM월 dd일',
 
