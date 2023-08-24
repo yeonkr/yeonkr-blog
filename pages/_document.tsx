@@ -13,6 +13,7 @@ export default class MyDocument extends Document {
             name="google-site-verification"
             content="_3PQvYrJcrucOFiJCkcSydgR43Hu0DPz5pMckH_TJ2Q"
           />
+          <meta name="naver-site-verification" content="546f643bf72f16f0c80550252c90dffc96122be9" />
           <link rel="shortcut icon" href="/favicon.ico" />
           <link rel="icon" type="image/png" sizes="128x128" href="favicon.png" />
 
