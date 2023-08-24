@@ -28,32 +28,6 @@ export default function NotionDomainPage(props) {
   // console.log(props);
   return (
     <>
-      <div
-        style={{
-          width: '100%',
-          paddingBottom: '2.3vh',
-        }}
-      >
-        <div
-          style={{
-            height: '30vh',
-          }}
-        >
-          <div
-            style={{
-              boxShadow: '2px 2px 8px 4px hsla(0,0%,6%,.1)',
-              width: '100%',
-              backgroundImage: 'url(/sky.jpg)',
-              backgroundRepeat: 'no-repeat',
-              backgroundPosition: 'center',
-              backgroundSize: 'cover',
-              minWidth: '100%',
-              minHeight: '100%',
-            }}
-          ></div>
-        </div>
-      </div>
-
       <NotionPage {...props} />
     </>
   );
