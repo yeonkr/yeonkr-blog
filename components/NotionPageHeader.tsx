@@ -80,9 +80,10 @@ export const NotionPageHeader: React.FC<{
           <ToggleThemeButton />
 
           {isSearchEnabled && <Search block={block} title={null} />}
-          {/*
+
           {navigationLinks
-            ?.map((link, index) => {
+            ?.slice(0, 2)
+            .map((link, index) => {
               if (!link.pageId && !link.url) {
                 return null;
               }
@@ -113,7 +114,7 @@ export const NotionPageHeader: React.FC<{
                 );
               }
             })
-            .filter(Boolean)} */}
+            .filter(Boolean)}
         </div>
       </div>
     </header>

@@ -53,6 +53,16 @@ export default siteConfig({
   navigationStyle: 'custom',
   navigationLinks: [
     {
+      title: 'Notes',
+      pageId: '24f0ab3b07f84126b252ffa4b63651f8',
+    },
+    {
+      title: 'Notes',
+      pageId: '24f0ab3b07f84126b252ffa4b63651f8',
+      menuPage: true,
+    },
+
+    {
       title: 'About',
       pageId: 'f97b9bba2b204de9b5481c99d72fabb9',
     },
@@ -61,15 +71,15 @@ export default siteConfig({
       pageId: 'f97b9bba2b204de9b5481c99d72fabb9',
       menuPage: true,
     },
-    {
-      title: 'Contact',
-      pageId: 'e86659a26b344d318265e59026ceb3eb',
-    },
-    {
-      title: 'Contact',
-      pageId: 'e86659a26b344d318265e59026ceb3eb',
-      menuPage: true,
-    },
+    // {
+    //   title: 'Contact',
+    //   pageId: 'e86659a26b344d318265e59026ceb3eb',
+    // },
+    // {
+    //   title: 'Contact',
+    //   pageId: 'e86659a26b344d318265e59026ceb3eb',
+    //   menuPage: true,
+    // },
   ],
 
   // -------- custom configs (yeonkr) -------------
