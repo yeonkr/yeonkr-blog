@@ -5,7 +5,7 @@ import { domain } from 'lib/config';
 import { resolveNotionPage } from 'lib/resolve-notion-page';
 import { NotionPageHeader } from '~/components/NotionPageHeader';
 
-export const getStaticProps = async a => {
+export const getServerSideProps = async a => {
   try {
     const props = await resolveNotionPage(domain);
 
