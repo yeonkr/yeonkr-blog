@@ -5,12 +5,12 @@ import { domain } from 'lib/config';
 import { resolveNotionPage } from 'lib/resolve-notion-page';
 import { NotionPageHeader } from '~/components/NotionPageHeader';
 
-export const getServerSideProps = async a => {
-  // export const getStaticProps = async a => {
+// export const getServerSideProps = async a => {
+export const getStaticProps = async a => {
   try {
     const props = await resolveNotionPage(domain);
 
-    return { props };
+    return { props, revalidate: 10 };
   } catch (err) {
     console.error('page error', domain, err);
 
