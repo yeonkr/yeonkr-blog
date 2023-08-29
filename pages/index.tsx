@@ -3,9 +3,7 @@ import * as React from 'react';
 import { NotionPage } from 'components';
 import { domain } from 'lib/config';
 import { resolveNotionPage } from 'lib/resolve-notion-page';
-import { NotionPageHeader } from '~/components/NotionPageHeader';
 
-// export const getServerSideProps = async a => {
 export const getStaticProps = async a => {
   try {
     const props = await resolveNotionPage(domain);
@@ -20,16 +18,7 @@ export const getStaticProps = async a => {
   }
 };
 
-// export default function NotionDomainPage(props) {
-//   // console.log(props);
-//   return <NotionPage {...props} />;
-// }
-
 export default function NotionDomainPage(props) {
   // console.log(props);
-  return (
-    <>
-      <NotionPage {...props} />
-    </>
-  );
+  return <NotionPage {...props} />;
 }
