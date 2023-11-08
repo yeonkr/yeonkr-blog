@@ -4,6 +4,15 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 });
 
 module.exports = withBundleAnalyzer({
+  async redirects() {
+    return [
+      {
+        source: '/',
+        destination: '/notes-24f0ab3b07f84126b252ffa4b63651f8',
+        permanent: true,
+      },
+    ];
+  },
   staticPageGenerationTimeout: 300,
   images: {
     domains: [
