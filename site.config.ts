@@ -61,15 +61,6 @@ export default siteConfig({
       pageId: 'f97b9bba2b204de9b5481c99d72fabb9',
       menuPage: true,
     },
-    // {
-    //   title: 'Contact',
-    //   pageId: 'e86659a26b344d318265e59026ceb3eb',
-    // },
-    // {
-    //   title: 'Contact',
-    //   pageId: 'e86659a26b344d318265e59026ceb3eb',
-    //   menuPage: true,
-    // },
   ],
 
   // -------- custom configs (yeonkr) -------------
